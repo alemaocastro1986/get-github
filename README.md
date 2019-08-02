@@ -1,4 +1,4 @@
-# **Get GitHub** repositories
+# **Get GitHub** repositórios
 
 > Projeto de aprendizado sobre **ReactJS** ministrado pela [Rockeseat](https://rocketseat.com.br/).
 
