@@ -17,7 +17,7 @@ export const Owner = styled.header`
 
   a {
     color: #f0d91d;
-    font-size: 1t6px;
+    font-size: 16px;
     text-decoration: none;
   }
 
@@ -42,10 +42,24 @@ export const Owner = styled.header`
   }
 `;
 
-export const IssueList = styled.ul`
+export const Filter = styled.div`
   padding-top: 30px;
   margin-top: 30px;
   border-top: 1px solid #eee;
+
+  select {
+    display: flex;
+    text-align: center;
+    color: #666;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    width: 100px;
+    height: 30px;
+  }
+`;
+
+export const IssueList = styled.ul`
+  padding-top: 30px;
   list-style: none;
 
   li {
@@ -97,5 +111,36 @@ export const IssueList = styled.ul`
         color: #999;
       }
     }
+  }
+`;
+
+export const Pagination = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+`;
+export const Button = styled.button.attrs(props => ({
+  type: 'button',
+  disabled: props.page,
+}))`
+  height: 35px;
+  width: 100px;
+  border: none;
+  background: #f0d91d;
+  color: #333;
+  font-size: 14px;
+  border-radius: 25px;
+
+  &:first-child {
+    margin-right: 5px;
+  }
+
+  &:hover {
+    background: rgba(240, 217, 29, 0.5);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
   }
 `;
